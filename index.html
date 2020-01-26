@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/favicon.jpg" type="image/jpg" sizes="16x16">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <title>FountainCloud | An Image Gallery</title>
+  </head>
+  <body>
+
+     <!-- navbar-->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg fixed-top bg-white shadow">
+        <div class="container"><a class="navbar-brand text-dark" href="index.html">FountainCloud</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="nav-link active text-dark" href="index.html">Home <span class="sr-only">(current)</span></a></li>
+              <li class="nav-item"><a class="nav-link text-dark" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link text-dark" href="discover.html">Discover Photos</a></li>
+              <li class="nav-item"><a class="nav-link text-dark" href="popular-photos.html">Popular Photos</a></li>
+              <li class="nav-item"><a class="nav-link text-dark" href="fc-stories.html">FC Stories</a></li>
+              <li class="nav-item"><a class="nav-link text-dark" href="contact.html">Contact</a></li>
+            </ul>
+             <button class="btn btn-outline-dark" type="button" onclick="upload();">Upload</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--Main Section-->
+    <section class="main bg-cover bg-center mt-5" id="main" style="background: linear-gradient(#000, transparent), url('img/background.jpg') no-repeat center; 
+background-size: cover;">
+      <div class="container py-4 index-forward">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <h1 class="text-center my-5 bolded" style="color: #f2f8fb;">Welcome <br> to <br> FountainCloud</h1>
+            <h3 class="text-white text-center">showering you with media from around the world.</h3>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 mt-5">
+            <form class="mx-2 my-auto d-inline w-100">
+              <div class="input-group">
+                <input type="text" class="form-control normal" placeholder="Search for photos">
+                  <span class="input-group-append">
+                  <button class="btn btn-outline-dark bg-dark text-white" type="button">Search</button>
+                  </span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--<div class="container-fluid p-0 shadow-sm">
+      <img src="img/bg.jpg">
+    </div>-->
+
+    <!-- Trending Topics section-->
+    <section class="container-fluid mt-5 d-none d-sm-block">
+      <header>
+        <h1 class="text-center text-dark bolded">Trending Topics</h1>
+        <hr class="mx-5">
+      </header>
+      <div class="container-fluid">
+        <div class="row mt-5">
+          <div class="col-lg-2">
+            <div class="card shadow-sm text-white" style="background-color: #828282">
+              <div class="card-body text-center font-weight-bold fonts">
+                Landscape
+              </div>
+            </div>
+          </div>
+           <!--<div class="col-lg-1">
+            <div class="card shadow-sm">
+              <div class="card-body text-center">
+                Landscape
+              </div>
+            </div>
+          </div>-->
+           <div class="col-lg-1">
+            <div class="card shadow-sm text-white" style="background-color: #787276">
+              <div class="card-body text-center font-weight-bold fonts">
+                Nature
+              </div>
+            </div>
+          </div>
+           <!--<div class="col-lg-1">
+            <div class="card shadow-sm">
+              <div class="card-body text-center font-weight-bold">
+                Life
+              </div>
+            </div>
+          </div>-->
+           <div class="col-lg-1">
+            <div class="card shadow-sm text-white" style="background-color: #88807B">
+              <div class="card-body text-center font-weight-bold fonts">
+                Travel
+              </div>
+            </div>
+          </div>
+           <div class="col-lg-1">
+            <div class="card shadow-sm text-white" style="background-color: #3E424B"> 
+              <div class="card-body text-center font-weight-bold fonts">
+                Art
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="card shadow-sm text-white" style="background-color: #222021">
+              <div class="card-body text-center font-weight-bold fonts">
+                Fashion
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-1">
+            <div class="card shadow-sm text-white" style="background-color: #999DA0">
+              <div class="card-body text-center font-weight-bold fonts">
+                B & W
+              </div>
+            </div>
+          </div>
+           <!--<div class="col-lg-1">
+            <div class="card shadow-sm">
+              <div class="card-body text-center">
+                Sky
+              </div>
+            </div>
+          </div>-->
+           <div class="col-lg-1">
+            <div class="card shadow-sm text-white" style="background-color: #777B7E">
+              <div class="card-body text-center font-weight-bold fonts">
+                Blues
+              </div>
+            </div>
+          </div>
+           <div class="col-lg-1">
+            <div class="card shadow-sm text-white" style="background-color: #48494B">
+              <div class="card-body text-center font-weight-bold fonts">
+                Celeb
+              </div>
+            </div>
+          </div>
+           <div class="col-lg-2">
+            <div class="card shadow-sm text-white" style="background-color: #808588">
+              <div class="card-body text-center font-weight-bold fonts">
+                Portrait
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Trending section-->
+
+    <section class="container-fluid mt-5">
+      <header>
+        <h1 class="text-dark mx-4 bolded">Trending</h1>
+        <hr class="mx-4">
+      </header>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/1.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image" data-toggle="modal" data-target="#modal-1">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/2.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image"  data-toggle="modal" data-target="#modal-2">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/3.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image"  data-toggle="modal" data-target="#modal-3">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/4.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image"  data-toggle="modal" data-target="#modal-4">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/5.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image"  data-toggle="modal" data-target="#modal-5">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/6.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image"  data-toggle="modal" data-target="#modal-6">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/7.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image"  data-toggle="modal" data-target="#modal-7">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/8.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image"  data-toggle="modal" data-target="#modal-8">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/9.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image"  data-toggle="modal" data-target="#modal-9">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/10.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image"  data-toggle="modal" data-target="#modal-10">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/11.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image"  data-toggle="modal" data-target="#modal-11">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/12.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image"  data-toggle="modal" data-target="#modal-12">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--New section-->
+
+    <section class="container-fluid mt-5 mb-5">
+      <header>
+        <h1 class="text-dark mx-4 bolded">New</h1>
+        <hr class="mx-4">
+      </header>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/100.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image"  data-toggle="modal" data-target="#modal-100">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/101.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image"  data-toggle="modal" data-target="#modal-101">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/102.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image"  data-toggle="modal" data-target="#modal-102">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/103.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image"  data-toggle="modal" data-target="#modal-103">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/104.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image"  data-toggle="modal" data-target="#modal-104">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/105.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image"  data-toggle="modal" data-target="#modal-105">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/106.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image"  data-toggle="modal" data-target="#modal-106">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/107.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image"  data-toggle="modal" data-target="#modal-107">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/108.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image"  data-toggle="modal" data-target="#modal-108">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/109.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image"  data-toggle="modal" data-target="#modal-109">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/110.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image"  data-toggle="modal" data-target="#modal-110">
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+            <img src="img/111.jpg" class="img-fluid rounded shadow-sm" alt="Responsive image"  data-toggle="modal" data-target="#modal-111">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Footer section-->
+
+    <footer>
+      <div class="container-fluid text-center bg-light">
+        <div class="row px-4">
+          <div class="col-lg-7 mx-auto">
+            <h2 class="text-dark my-4 fw-600">FountainCloud</h2>
+            <h6 class="text-dark my-4 letter-spacing-3" style="color: #9fa8a3;">showering you with media from around the world.</h6>
+            <p class="text-muted my-4">Have some questions about FountainCloud? Let's talk about how we can help you.</p>
+            <ul class="list-inline my-4">
+              <li class="list-inline-item"><a class="social-link" href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li class="list-inline-item"><a class="social-link" href="#"><i class="fab fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a class="social-link" href="#"><i class="fab fa-pinterest"></i></a></li>
+              <li class="list-inline-item"><a class="social-link" href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyrights bg-light px-4">
+        <div class="container py-4 border-top text-center">
+          <p class="mb-0 text-muted py-2">&copy; 2020 Copyright FountainCloud. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="modal-1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/1.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal modal fade" id="modal-2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/2.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal modal fade" id="modal-3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/3.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 4 -->
+    <div class="portfolio-modal modal fade" id="modal-4" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/4.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 5 -->
+    <div class="portfolio-modal modal fade" id="modal-5" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/5.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 6 -->
+    <div class="portfolio-modal modal fade" id="modal-6" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/6.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 7 -->
+    <div class="portfolio-modal modal fade" id="modal-7" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/7.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 8 -->
+    <div class="portfolio-modal modal fade" id="modal-8" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/8.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 9 -->
+    <div class="portfolio-modal modal fade" id="modal-9" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/9.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 10 -->
+    <div class="portfolio-modal modal fade" id="modal-10" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/10.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 11 -->
+    <div class="portfolio-modal modal fade" id="modal-11" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/11.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 12 -->
+    <div class="portfolio-modal modal fade" id="modal-12" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/12.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--New Section Portfolio Modal-->
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="modal-100" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/100.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal modal fade" id="modal-101" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/101.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal modal fade" id="modal-102" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/102.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 4 -->
+    <div class="portfolio-modal modal fade" id="modal-103" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/103.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 5 -->
+    <div class="portfolio-modal modal fade" id="modal-104" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/104.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 6 -->
+    <div class="portfolio-modal modal fade" id="modal-105" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/105.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 7 -->
+    <div class="portfolio-modal modal fade" id="modal-106" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/106.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 8 -->
+    <div class="portfolio-modal modal fade" id="modal-107" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/107.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 9 -->
+    <div class="portfolio-modal modal fade" id="modal-108" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/108.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 10 -->
+    <div class="portfolio-modal modal fade" id="modal-109" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/109.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 11 -->
+    <div class="portfolio-modal modal fade" id="modal-110" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/110.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 12 -->
+    <div class="portfolio-modal modal fade" id="modal-111" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img class="img-fluid rounded" src="img/111.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

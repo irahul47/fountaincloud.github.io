@@ -1,0 +1,94 @@
+/*@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');*/
+
+/*Fonts*/
+
+@font-face {
+font-family: 'Brandon Grotesque Regular';
+font-style: normal;
+src: url(fonts/Brandon_reg.otf);
+}
+
+@font-face {
+font-family: 'Brandon Grotesque Bold';
+font-style: normal;
+font-weight: normal;
+src: url(fonts/Brandon_bld.otf);
+}
+
+.bolded {
+	font-family: 'Brandon Grotesque Bold';
+}
+.normal {
+	font-family: 'Brandon Grotesque Regular';
+}
+
+.fonts {
+	font-family: Brandon Grotesque Bold;
+}
+
+h1,h2,h3,h4,h5,h6,p,button,a,label {
+	font-family: 'Brandon Grotesque Regular';
+}
+
+img {
+	width: 100%;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.lined {
+	display: inline-block;
+	position: relative;
+	padding-bottom: 0.7rem;
+}
+
+.lined:before {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 8rem;
+	height: 3px;
+	background: #9fa8a3;
+}
+
+.main {
+	height: 500px;
+	/*background: linear-gradient(270deg, #000000, #090909, #131313, #1a1a1a, #202020, #48494b);
+	background-size: 1200% 1200%;
+
+	-webkit-animation: AnimationName 20s ease infinite;
+	-moz-animation: AnimationName 20s ease infinite;
+	animation: AnimationName 20s ease infinite;*/
+}
+
+
+/*@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}*/
+
+.social-link {
+	color: #343a40!important;
+	font-size: 18px;
+}
+
+.fw-600 {
+	font-weight: 600;
+}
+
+label {
+	font-size: 18px;
+}

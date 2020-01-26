@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/favicon.jpg" type="image/jpg" sizes="16x16">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <title>Contact - FountainCloud</title>
+  </head>
+  <body>
+
+     <!-- navbar-->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg fixed-top bg-white shadow">
+        <div class="container"><a class="navbar-brand text-dark" href="index.html">FountainCloud</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="nav-link active text-dark" href="index.html">Home <span class="sr-only">(current)</span></a></li>
+              <li class="nav-item"><a class="nav-link text-dark" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link text-dark" href="discover.html">Discover Photos</a></li>
+              <li class="nav-item"><a class="nav-link text-dark" href="popular-photos.html">Popular Photos</a></li>
+              <li class="nav-item"><a class="nav-link text-dark" href="fc-stories.html">FC Stories</a></li>
+              <li class="nav-item"><a class="nav-link text-dark" href="contact.html">Contact</a></li>
+            </ul>
+             <button class="btn btn-outline-dark" type="button" onclick="upload();">Upload</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--Main Section-->
+    <section class="main bg-cover bg-center mt-5" id="main" style="background: linear-gradient(#000, transparent), url('img/contact.jpg') no-repeat center; 
+background-size: cover; height: 20%;">
+      <div class="container py-4 index-forward">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <h1 class="display-2 text-center my-5 bolded text-white">Contact</h1>
+          </div>
+      </div>
+    </section>
+
+    <!--Contact section-->
+
+    <section class="container my-5">
+      <header>
+        <h1 class="text-dark text-center mx-4 bolded">Contact</h1>
+        <hr class="mx-4">
+      </header>
+      <div class="container my-4">
+        <div class="row">
+          <div class="col-lg-12">
+            <form id="contact-form" method="post" action="" role="form">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label class="fw-600" for="form_name">Name</label>
+                    <input id="form_name" type="text" name="name" class="form-control normal" placeholder="Name*" required="required">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="fw-600" for="form_email">Email</label>
+                    <input id="form_email" type="email" name="email" class="form-control normal" placeholder="Email*" required="required">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="fw-600" for="form_phone">Phone</label>
+                    <input id="form_phone" type="tel" name="phone" class="form-control normal" placeholder="Phone Number">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label class="fw-600" for="form_message">Message</label>
+                    <textarea id="form_message" name="message" class="form-control normal" placeholder="Message*" rows="4" required></textarea>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <input type="submit" class="btn btn-dark btn-send normal" value="Send Message">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+    <!--Footer section-->
+
+    <footer>
+      <div class="container-fluid text-center bg-light">
+        <div class="row px-4">
+          <div class="col-lg-7 mx-auto">
+            <h2 class="text-dark my-4 fw-600">FountainCloud</h2>
+            <h6 class="text-dark my-4 letter-spacing-3" style="color: #9fa8a3;">showering you with media from around the world.</h6>
+            <p class="text-muted my-4">Have some questions about FountainCloud? Let's talk about how we can help you.</p>
+            <ul class="list-inline my-4">
+              <li class="list-inline-item"><a class="social-link" href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li class="list-inline-item"><a class="social-link" href="#"><i class="fab fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a class="social-link" href="#"><i class="fab fa-pinterest"></i></a></li>
+              <li class="list-inline-item"><a class="social-link" href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyrights bg-light px-4">
+        <div class="container py-4 border-top text-center">
+          <p class="mb-0 text-muted py-2">&copy; 2020 Copyright FountainCloud. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
